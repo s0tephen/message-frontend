@@ -143,7 +143,7 @@ export default {
         ElMessage.error('请输入完整信息')
       } else {
         request.sendMessageAndUpdate(this.sendMessage.id, this.sendMessage.name, this.sendMessage.content).then(res => {
-          if (res.data.code === 200) {
+          if (res.data.code === 1) {
             this.getContentPage()
             ElMessage({
               message: res.data.msg,
